@@ -1,21 +1,19 @@
 const { pagination, TypesButtons, StylesButton } = require('@devraelfreeze/discordjs-pagination');
-const { ButtonStyle } = require('discord.js'); // Discord.js v14+
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder,  ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 
 const embed1 = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('Hand tracker')
     .setDescription('This is your current hand')
     .setTimestamp(Date.now())
-    .setImage("https://gameslikefinder.com/wp-content/uploads/tinkerer-cards-energizing-tonic.jpg");
+    .setImage("https://raw.githubusercontent.com/any2cards/gloomhaven/master/images/character-ability-cards/gloomhaven/TI/gh-toxic-bolt.png");
 
 const embed2 = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('Initiative tracker 2nd Page')
     .setDescription('This is the iniative tracker')
     .setTimestamp(Date.now())
-    .setImage("https://gameslikefinder.com/wp-content/uploads/tinkerer-cards-enhancement-field.jpg")
-    ]);
+    .setImage("https://raw.githubusercontent.com/any2cards/gloomhaven/master/images/character-ability-cards/gloomhaven/TI/gh-enhancement-field.png");
 
 // Make Embeds using DiscordJS package
 const pages = [embed1, embed2];

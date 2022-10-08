@@ -33,6 +33,18 @@ client.once('ready', () => {
 });
 
 client.on('interactionCreate', async interaction => {
+
+    if(interaction.isButton()){
+
+        console.log(`Button press ${interaction.customId}`);
+
+        if(interaction.customId === "longrest"){
+            console.log(`${interaction.user.tag} is taking a long rest.`);
+            await interaction.reply({content: "Button pressed"})
+            return;
+        }
+    }
+
 	if (!interaction.isChatInputCommand()) return;
 
 	const command = interaction.client.commands.get(interaction.commandName);

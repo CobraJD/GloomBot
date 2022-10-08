@@ -9,6 +9,6 @@ module.exports = {
                 .setDescription('The input to echo back')
                 .setRequired(true)),
     async execute(interaction) {
-        await interaction.reply(`Your input: ${interaction.data.option}`);
+        await interaction.reply(`Your input: ${interaction.options.getString('input')}`);
     },
 }
